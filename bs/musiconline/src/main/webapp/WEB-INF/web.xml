@@ -1,0 +1,120 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/getUser</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddFavoriteServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.AddFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFavoriteServlet</servlet-name>
+    <url-pattern>/addFavorite</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteFavoriteServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.DeleteFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteFavoriteServlet</servlet-name>
+    <url-pattern>/deleteFavorite</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>GetFavoriteServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.GetFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetFavoriteServlet</servlet-name>
+    <url-pattern>/getFavorite</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FindFavoriteServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.FindFavoriteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFavoriteServlet</servlet-name>
+    <url-pattern>/findFavorite</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>UpdateUserServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.UpdateUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUserServlet</servlet-name>
+    <url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>AddListServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.AddListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddListServlet</servlet-name>
+    <url-pattern>/addList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeleteListServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.DeleteListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteListServlet</servlet-name>
+    <url-pattern>/deleteList</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>GetListServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.GetListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetListServlet</servlet-name>
+    <url-pattern>/getList</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FindListServlet</servlet-name>
+    <servlet-class>gdut.imis.servlet.FindListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindListServlet</servlet-name>
+    <url-pattern>/findList</url-pattern>
+  </servlet-mapping>
+
+</web-app>

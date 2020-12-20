@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="gdut.imis">
+    <select id="addList" parameterType="gdut.imis.domain.List" >
+        insert into mylist
+        values (#{username},#{listid})
+    </select>
+
+    <select id="getList" parameterType="java.lang.String" resultType="gdut.imis.domain.List">
+        select * from mylist
+        where username = #{username}
+    </select>
+
+    <select id="findList" parameterType="gdut.imis.domain.List" resultType="gdut.imis.domain.List">
+        select * from mylist
+        where username = #{username} and listid = #{listid}
+    </select>
+
+    <delete id="deleteList" parameterType="gdut.imis.domain.List">
+        delete from mylist
+        where username = #{username} and listid = #{listid} ;
+    </delete>
+</mapper>
