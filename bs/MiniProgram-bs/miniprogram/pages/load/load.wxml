@@ -13,7 +13,7 @@
 				<view class="confirm-btn" bindtap="bindGetUserInfo">
 					点击进入
 				</view>
-        <text class="copyright">————— · —————\n本小程序旨在为校园学生群体构建\n书籍共享平台,促进校园闲置书籍流动。</text>
+        <text class="copyright">————— · —————\n本小程序旨在为校园学生群体构建\n书籍共享平台,促进校园闲置书籍流动。11111111111</text>
 			</view>
 		</view>
 
