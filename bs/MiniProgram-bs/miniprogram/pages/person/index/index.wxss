@@ -1,0 +1,102 @@
+/* pages/person/person.wxss */
+
+/* 上方用户信息 */
+.avatar-wrapper {
+  background: #1b82d13a;
+  padding: 25px 0;
+}
+
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.avatar-wrapper .avatar image {
+  width: 100px;
+  height: 100px;
+}
+
+.avatar-wrapper .text {
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+}
+
+/* 分割线样式 */
+.divLine {
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  position: absolute;
+  right: 20rpx;
+  transform: rotate(45deg);
+  margin-top: 30rpx;
+}
+
+.arrows image {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-left: 500rpx;
+}
+
+/* 字体样式 */
+.alllists {
+  font-family: "微软雅黑";
+  font-size: 35rpx;
+  height: 130rpx;
+}
+
+/* 标签样式相关 */
+.lable {
+  display: flex;
+  height: 85rpx;
+}
+
+.lable-image {
+  height: 60rpx;
+  width: 60rpx;
+  margin-top: 40rpx;
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+}
+
+.lable-content {
+  margin-top: 25rpx;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.content-flex {
+  display: flex;
+}
+
+
+/* 提示登录相关 */
+.loginimg {
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 20%;
+  margin-left: 28%;
+}
+
+.loginsign {
+  text-align: center;
+}
+
+.tologin,
+.signup {
+  color: #436eee;
+}

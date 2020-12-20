@@ -1,0 +1,61 @@
+
+var formatNumber = function (n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+/**
+ * 将时间戳(1570550400)格式转为 yyyy-MM-dd格式
+ */
+var formatDate = function (datetime) {
+  var date = getDate(datetime);
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  var hour=date.getHours()
+  // if(date.getHours()<8){  //由于时区会被修正为00时，所以得进行调整
+  //   day=day-1;
+  //   var hour=date.getHours()+16;
+  // }
+  // else{
+  //   var hour=date.getHours()-8;
+  // }
+  var min=date.getMinutes();
+
+  var now=getDate();
+  var year1=now.getFullYear();
+  var month1=now.getMonth()+1;
+  var day1=now.getDate();
+  var hour1=now.getHours();
+  var min1=now.getMinutes();
+
+  if(year1!=year||month1!=month){
+    return year+"-"+month+"-"+day;
+  }
+  else if((day1-day>1)||((day1-day==1)&&(hour<=hour1))){
+    if((day1-day)<7){
+      return (day1-day)+"天前";
+    }
+    else if((day1-day)>=7){
+      num=(day1-day)/7;
+      return num.toFixed(0)+"周前";
+    }
+  }
+  else if((day1-day==1)&&(hour>hour1)){
+    return (hour1+24-hour)+"小时前";
+  }
+  else if((day==day1)&&(hour1>hour)){
+    return (hour1-hour)+"小时前";
+  }
+  else if((hour1==hour)&&(min1>min)){
+    return (min1-min)+"分钟前";
+  }
+  else if((hour1-hour==1)&&(min1<=min)){
+    return (60+min1-min)+"分钟前";
+  }
+  else{
+   return "刚刚";
+  }
+}
+module.exports = {
+  formatDate: formatDate
+}

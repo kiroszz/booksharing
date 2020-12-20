@@ -1,0 +1,41 @@
+<!--pages/circle/index/index.wxml-->
+<wxs src="timeformat.wxs" module="filters"/>
+<view class='bottomrow'>
+  <view class='bottomtab' bindtap="first_select">
+    <text class='bottomtabTextOn' style='color:{{firco}};border-bottom:4rpx solid' wx:if="{{temp}}">寻书动态</text>
+    <text class='bottomtabText' style='color:{{firco}}' wx:if="{{!temp}}">寻书动态</text>
+  </view>
+  <view class='bottomtab' bindtap="second_select">
+    <text class='bottomtabTextOn' style='color:{{secco}};border-bottom:4rpx solid' wx:if="{{!temp}}">出书动态</text>
+    <text class='bottomtabText' style='color:{{secco}}' wx:if="{{temp}}">出书动态</text>
+  </view>
+</view>
+
+<scroll-view class='scbg' scroll-y='true' bindrefresherrefresh="updateData" bindscrolltolower="getSeekInfo"  refresher-enabled="{{true}}" refresher-triggered="{{triggered}}">
+<block  wx:for="{{temp?list1:list2}}" wx:key="key" wx:for-item="itemName" wx:for-index="id">
+  <view class='box' id="itemName" bindtap="showdetail" data-text="{{itemName}}">
+    <view class='firstblock'>
+      <view class='person'>
+        <image src="{{itemName.avatar}}" class="touxiang"></image>
+        <view class="Info">
+        <view class='name'>
+          <text class='showname'>{{itemName.username}}</text>
+        </view>
+        <view>
+          <view class='content'>#{{itemName.bookname}}#\n</view>  
+          <view class='content'>{{itemName.content}}</view>
+          <view wx:if="{{itemName.photo}}"><image  class='Info-image' src="{{itemName.photo}}"></image></view>
+        </view>
+        <view class='tel'>
+          <text class="lable">#{{itemName.classroom}}</text>
+          <text class='showtime'>{{filters.formatDate(itemName.sendtime)}}</text>
+        </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{temp}}"><view class='bottomline' wx:if="{{!hasMoreSeek}}" >-------- 我也是有底线的 ---------</view></block>
+<block wx:else><view class='bottomline' wx:if="{{!hasMoreLend}}" >-------- 我也是有底线的 ---------</view></block>
+
+</scroll-view>

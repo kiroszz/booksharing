@@ -1,0 +1,25 @@
+<scroll-view class='scbg' scroll-y='true'>
+<block  wx:for="{{circleList}}" wx:key="key" wx:for-item="itemName" wx:for-index="id">
+  <view class='box' id="itemName" bindtap="showdetail" data-text="{{itemName}}">
+    <view class='firstblock'>
+      <view class='person'>
+        <image src="{{itemName.avatar}}" class="touxiang"></image>
+        <view class="Info">
+        <view class='name'>
+          <text class='showname'>{{itemName.username}}</text>
+        </view>
+        <view>
+          <view class='content'>#{{itemName.bookname}}#\n</view>  
+          <view class='content'>{{itemName.content}}</view>
+          <view wx:if="{{itemName.photo}}"><image  class='Info-image' src="{{itemName.photo}}"></image></view>
+        </view>
+        <view class='tel'>
+          <text class="lable">#{{itemName.classroom}}</text>
+          <text class='showtime'>{{filters.formatDate(itemName.sendtime)}}</text>
+        </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+</scroll-view>

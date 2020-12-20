@@ -1,0 +1,89 @@
+/* pages/circle/commit/commit.wxss */
+
+/* 页面背景 */
+page{
+  background-color: #EFEFEF;
+}
+
+/* 导航栏样式 */
+.bottomrow{
+  background-color: white;
+  width: 100%;
+  height: 9%;
+  top: 0rpx;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomtab{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomtabText{
+  font-size: 35rpx;
+  color: #979797;
+}
+
+/* 书籍信息样式 */
+.textarea{
+  width: 100%;
+  background-color: #fff;
+  top:9%;
+  position: fixed;
+}
+.bookname{
+  width: 96%;
+  height: 50rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 38rpx;
+}
+.textinput{
+  width: 96%;
+  height: 200rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 38rpx;
+}
+
+/* 按钮样式 */
+.click{
+  width: 84%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: auto;
+  margin-top: 800rpx;
+  margin-left: 8%;
+  margin-right: 8%;
+  border-radius: 12px;
+  background-color: #436eee;
+  text-align: center;
+  color: white;
+  font-size: 33rpx;
+}
+
+.addphoto .photo{
+  margin: 10rpx;
+  width: 140rpx;
+  height: 140rpx;
+  position: relative;
+}
+
+.addphoto .deletephoto{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 320rpx;
+  right: 580rpx;
+}

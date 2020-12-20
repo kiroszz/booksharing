@@ -1,0 +1,68 @@
+<view wx:if="{{!donelogin}}">
+	<view>
+		<image class="loginimg" src="/images/icon/login.png"></image>
+	</view>
+	<view class="loginsign">
+		请先<text bindtap="toLogin" class="tologin">登录</text>或<text bindtap="signup" class="signup">注册</text>哦！
+	</view>
+</view>
+
+<view wx:else>
+
+	<view class='bottomrow'>
+		<view class='bottomtab' bindtap="first_select">
+			<text class='bottomtabTextOn' style='color:{{firco}};border-bottom:4rpx solid' wx:if="{{temp}}">寻书发布</text>
+			<text class='bottomtabText' style='color:{{firco}}' wx:if="{{!temp}}">寻书发布</text>
+		</view>
+		<view class='bottomtab' bindtap="second_select">
+			<text class='bottomtabTextOn' style='color:{{secco}};border-bottom:4rpx solid' wx:if="{{!temp}}">出书发布</text>
+			<text class='bottomtabText' style='color:{{secco}}' wx:if="{{temp}}">出书发布</text>
+		</view>
+	</view>
+
+	<view wx:if="{{temp}}" class='textarea'>
+		<textarea placeholder="请输入书籍名称" placeholder-style="color:#888888; font-size:38rpx;" class='bookname' maxlength='-1' bindinput="bindBookname"></textarea>
+		<textarea placeholder="其它补充（版本、出版社等）" placeholder-style="color:#888888; font-size:38rpx;" class='textinput' maxlength='-1' bindinput="bindContent"></textarea>
+		<view class="addphoto">
+			<image class='photo' src='{{addphotoPath}}' bindtap='addphoto'></image>
+			<image wx:if="{{delete}}" class="deletephoto" src="/images/icon/deletephoto.png" bindtap="deletephoto"></image>
+		</view>
+	</view>
+	<view wx:else class='textarea'>
+		<textarea placeholder="请输入书籍名称" placeholder-style="color:#888888; font-size:38rpx;" class='bookname' maxlength='-1' bindinput="bindBookname" scroll-y="false"></textarea>
+		<textarea placeholder="其它补充（版本、出版社等）" placeholder-style="color:#888888; font-size:38rpx;" class='textinput' maxlength='-1' bindinput="bindContent"></textarea>
+		<view class="addphoto">
+			<image class='photo' src='{{addphotoPath}}' bindtap='addphoto'></image>
+			<image wx:if="{{delete}}" class="deletephoto" src="/images/icon/deletephoto.png" bindtap="deletephoto"></image>
+		</view>
+		<view class="picker-box">请选择书籍分类：
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="picker">
+					　{{array[index]}}　
+				</view>
+			</picker>
+		</view>
+		<view class="page">
+			<view class="page__bd">
+				<view class="section section_gap">
+					<radio-group class="radio-group" bindchange="typeChange">
+						<radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+							<text class="item">{{item.value}}</text>
+						</radio>
+					</radio-group>
+				</view>
+			</view>
+		</view>
+		<view class="page__bd">
+			<view class="section section_gap">
+				<view class="section__title">存入个人书籍</view>
+				<view class="body-view">
+					<switch class="switch" checked="{{addbook}}" bindchange="switchChange" />
+				</view>
+				\t　
+			</view>
+		</view>
+	</view>
+	<view id='btn' class='click' bindtap='send'>发布</view>
+
+</view>

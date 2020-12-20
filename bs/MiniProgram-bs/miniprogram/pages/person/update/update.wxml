@@ -1,0 +1,25 @@
+<!--pages/enroll/enroll.wxml-->
+<view class='background'>
+	<view class="avatar">
+		<image style="border-radius:50%;" src="{{avatarUrl ? avatarUrl:'/images/icon/person.png'}}" class="avatar-img"></image>
+		<text class="avatar-text">个人信息编辑</text>
+	</view>
+
+	<view class='first'>
+		<text class="first-text">昵称：</text>
+		<textarea value="{{data.userName}}" class='inputs' type='text' bindinput='usernameInput'> </textarea>
+	</view>
+	<view class='second'>
+		<text class="first-text">手机号：</text>
+		<textarea value="{{data.phone}}" class='inputs' type='number' bindinput='phoneInput'> </textarea>
+	</view>
+	<view class='second'>
+		<text class="first-text">微信号：</text>
+		<textarea value="{{data.wechatID}}" class='inputs' type='text' bindinput='wechatIDInput'> </textarea>
+	</view>
+	<view class='second'>
+		<text class="first-text">年级专业班级：</text>
+		<textarea value="{{data.classroom}}" class='inputs' type='text' bindinput='classroomInput'> </textarea>
+	</view>
+	<button type="primary" bindtap="confirm" id="btn1">确认修改</button>
+</view>

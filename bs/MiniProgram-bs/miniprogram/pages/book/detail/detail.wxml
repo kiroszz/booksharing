@@ -1,0 +1,46 @@
+<!--pages/book/detail/detail.wxml-->
+
+<!--pages/circle/detail/detail.wxml-->
+<wxs src="timeformat.wxs" module="filters"/>
+<view>
+<scroll-view scroll-y='true' class="detail">
+  <view class="person">
+    <image src="{{data.avatar}}" class="touxiang"></image>
+    <view class="person-name">
+      <text class="name">{{data.username}}</text>
+      <text class="classroom">{{data.classroom}}</text>
+    </view>
+  </view>
+  <view class="price">
+    <text wx:if="{{data.type=='free'}}" class="type">\n¥免费送出</text>
+    <text wx:if="{{data.type=='bargaining'}}" class="type">\n¥议价出售</text>
+  </view>
+  <view class="book">
+    <text wx:if="{{data.bookname}}" class="text">{{data.bookname}}\n</text>
+    <text wx:if="{{data.content}}" class="content">{{data.content}}</text>
+    <view wx:if="{{data.photo}}">
+      <text>\n</text>
+      <image src="{{data.photo}}"></image> 
+    </view>
+    <text wx:if="{{data.addtime}}" class="time">\n\n{{filters.formatDate(data.addtime)}}\n\n</text>
+  </view>
+  <view wx:if="{{data.user_id==user_id}}">
+    <image class="button2" bindtap="deleteBook" src="/images/icon/deletecircle.png"></image>
+  </view>
+  <text>\n\n\n\n\n\n</text>
+</scroll-view>
+<!--圆形点击框  -->
+<view class="round-click" wx:if="{{data.user_id!=user_id}}">
+  <view class="img">
+    <button  wx:if="{{isCollected}}" bindtap="collectDelete" class="img-button">
+      <image class="but-img" src="/images/icon/collected.png"></image>
+    </button>
+    <button  wx:else bindtap="collect" class="img-button">
+      <image class="but-img" src="/images/icon/collect.png"></image>
+    </button>
+  </view>
+   <view class="line">
+    <button class="but-line" bindtap="toChatroom">联系Ta</button>
+  </view>
+</view>
+</view>

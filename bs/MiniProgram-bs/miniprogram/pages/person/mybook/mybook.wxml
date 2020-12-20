@@ -1,0 +1,27 @@
+<scroll-view scroll-x="true" style="width: 100%;white-space:nowrap;">
+
+</scroll-view>
+
+<scroll-view class="scbg" scroll-y="true" enable-flex="true">
+	<block wx:for="{{mybooks}}" wx:key="key" wx:for-item="itemName" wx:for-index="id">
+		<view class='box' id="itemName" bindtap="showdetail" data-text="{{itemName}}">
+			<view class='secondblock'>
+				<view class='name'>
+					<image src="{{itemName.avatarUrl}}" class="touxiang"></image>
+					<text class='showname'>{{itemName.username}}</text>
+				</view>
+				<view class="book-box">
+					<view wx:if="{{itemName.photo}}">
+						<image class='photo' src="{{itemName.photo}}"></image>
+					</view>
+					<text class='bookname'>《{{itemName.bookname}}》</text>
+					<view class='content'>{{itemName.content}}</view>
+				</view>
+			</view>
+		</view>
+	</block>
+	<view class="addbox">
+		<image class="addmybook" src="/images/icon/addmybook.png" bindtap="addbook"></image>
+		<view class="addtxt">添加书籍</view>
+	</view>
+</scroll-view>

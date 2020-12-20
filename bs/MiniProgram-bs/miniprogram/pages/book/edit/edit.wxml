@@ -1,0 +1,29 @@
+<!--pages/book/edit/edit.wxml-->
+<view class='textarea'>
+	<textarea value="{{data.bookname}}" class='bookname' maxlength='-1' bindinput="bindBookname"></textarea>
+	<textarea value="{{data.content}}" class='textinput' maxlength='-1' bindinput="bindContent"></textarea>
+	<view class="addphoto">
+		<image class='photo' src='{{addphotoPath}}' bindtap='addphoto'></image>
+		<image wx:if="{{delete}}" class="deletephoto" src="/images/icon/deletephoto.png" bindtap="deletephoto"></image>
+	</view>
+	<view class="section">
+		<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<view class="picker">
+				书籍分类：{{array[index]}}
+			</view>
+		</picker>
+	</view>
+	<view class="page">
+		<view class="page__bd">
+			<view class="section section_gap">
+				<radio-group class="radio-group" bindchange="typeChange">
+					<radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+						<text>{{item.value}}</text>
+					</radio>
+				</radio-group>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view id='btn' class='click' bindtap='updateBook'>保存</view>

@@ -1,0 +1,119 @@
+/* pages/circle/index/index.wxss */
+
+/* 页面背景 */
+page {
+  background-color: #EFEFEF;
+}
+
+/* 页面布局相关 */
+.scbg {
+  top: 1%;
+  position: absolute;
+  background-color: #EFEFEF;
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  border-radius: 12px;
+  width: 45.5%;
+  background-color: white;
+  border-bottom: 15px;
+  margin-left: 3%;
+  margin-top: 20rpx;
+}
+
+.secondblock {
+  display: flex;
+  flex-flow: column;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-bottom: 15rpx;
+  border-radius: 12px;
+  margin-top: 0;
+}
+
+
+/* 用户信息样式 */
+.touxiang {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10px;
+  margin-bottom: 10rpx;
+}
+
+.person {
+  width: 75%;
+  height: 130rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+
+.name {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10rpx;
+  margin-left: 0%;
+  margin-right: 6%;
+  font-size: 40rpx;
+  flex-direction: row;
+  border-bottom: 1rpx solid #CFCFCF;
+}
+
+.showname {
+  font-size: 32rpx;
+  color: #3F51B5;
+  font-family: PingFangSC-regular;
+  margin-top: 6rpx;
+  margin-left: 2rpx;
+}
+
+.showtime {
+  padding-top: 55rpx;
+  padding-left: 200rpx;
+  font-size: 20rpx;
+  color: gray;
+  font-family: PingFangSC-regular;
+}
+
+/* 书籍信息样式 */
+.book-box {
+  display: flex;
+  flex-flow: column;
+  margin-top: 10rpx;
+}
+
+.bookname {
+  font-size: 32rpx;
+  color: #F57123;
+  font-family: PingFangSC-regular;
+  word-break: break-all;
+  /* 文本溢出省略*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 26rpx;
+  color: black;
+  font-family: PingFangSC-regular;
+  word-break: break-all;
+  padding-top: 5rpx;
+  padding-left: 14rpx;
+}
+
+.photo {
+  width: 220rpx;
+  height: 200rpx;
+  border-radius: 1px;
+  margin-top: 20rpx;
+}

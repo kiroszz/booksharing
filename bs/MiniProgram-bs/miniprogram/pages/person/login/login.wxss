@@ -1,0 +1,111 @@
+/* pages/enroll/enroll.wxss */
+
+/* 页面布局相关 */
+page{
+  left: 0rpx;
+  right: 0rpx;
+  background-color: white;
+}
+
+.background{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+/* title信息 */
+.avatar{
+  margin-top: 5%;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 2%;
+}
+
+.avatar-text{
+  margin-left: 8rpx;
+}
+
+.avatar-img{
+  height: 120rpx;
+  width: 120rpx;
+  vertical-align:middle;
+}
+
+/* 注册信息输入 */
+.first{
+  margin-top: 40rpx;
+}
+
+.second{
+  margin-top: 40rpx;
+}
+
+.first-text{
+  font-size: 35rpx;
+}
+
+.inputs {
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 33rpx;
+  border-radius: 12px;
+  border: 1px solid #c8cccf;
+  color: #6a6f77;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+}
+
+.plas {
+  font-size: 30rpx;
+  color: #CCCCCC;
+}
+
+/* 没有账号 */
+.cha {
+  width: 90%;
+  height: 50rpx;
+  margin: auto;
+  margin-top: 30rpx;
+  margin-left: 27%;
+  margin-right: 5%;
+  margin-bottom: 30rpx;
+}
+
+.no{
+  color: black;
+  font-size: 28rpx;
+  margin-left: 15rpx;
+  font-family: PingFangSC-regular;
+}
+
+/* 登录按钮 */
+#btn1 {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 25%;
+  margin-top: 80rpx;
+  border-radius: 12px;
+  background-color: #436eee;
+  text-align: center;
+  color: white;
+  font-size: 33rpx;
+}
+
+/* 授权登录按钮 */
+.but{
+  width: 70%;
+  height:80rpx;
+  margin-top: 180rpx;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 12px;
+  background-color: #436eee;
+  color: white;
+  font-size: 33rpx;
+  vertical-align:middle;
+  text-align: center;
+}

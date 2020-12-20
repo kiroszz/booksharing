@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/load/load",
+    "pages/book/addbook/addbook",
+    "pages/circle/detail/detail",
+    "pages/book/edit/edit",
+    "pages/book/detail/detail",
+    "pages/book/select/select",
+    "pages/person/enroll/enroll",
+    "pages/circle/commit/commit",
+    "pages/circle/index/index",
+    "pages/person/circle/circle",
+    "pages/person/index/index",
+    "pages/person/mybook/mybook",
+    "pages/person/collect/collect",
+    "pages/person/update/update",
+    "pages/information/room/room",
+    "pages/information/index/index",
+    "pages/book/index/index",
+    "pages/person/login/login"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#436eee",
+    "navigationBarTitleText": "书香传情",
+    "navigationBarTextStyle": "black"
+  },"tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#436eee",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/circle/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/circle.png",
+        "selectedIconPath": "images/icon/circle-selected.png"
+      },
+      {
+        "pagePath": "pages/book/index/index",
+        "text": "书籍",
+        "iconPath": "images/icon/book.png",
+        "selectedIconPath": "images/icon/book-selected.png"
+      },
+      {
+        "pagePath": "pages/circle/commit/commit",
+        "text": "发布",
+        "iconPath": "images/icon/publish.png",
+        "selectedIconPath": "images/icon/publish-selected.png"
+      },
+      {
+        "pagePath": "pages/information/index/index",
+        "text": "消息",
+        "iconPath": "images/icon/information.png",
+        "selectedIconPath": "images/icon/information-selected.png"
+      },
+      {
+        "pagePath": "pages/person/index/index",
+        "text": "个人",
+        "iconPath": "images/icon/person.png",
+        "selectedIconPath": "images/icon/person-selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,93 @@
+<!--pages/person/person.wxml-->
+
+<view class="mine-wrapper">
+	<view class="avatar-wrapper">
+		<view>
+			<view class="avatar">
+				<image style="border-radius:50%;" src="{{avatarUrl ? avatarUrl:'/images/icon/person.png'}}"></image>
+			</view>
+			<view class="text">
+				<text wx:if="{{donelogin}}">{{donelogin}}</text>
+				<view wx:else>
+					<text bindtap="toLogin"> 登录 </text> / <text bindtap="signup"> 注册 </text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view wx:if="{{donelogin}}">
+		<view class="alllists">
+			<view class="lable">
+				<image class="lable-image" src='/images/icon/lablecircle.png'></image>
+				<view class="lable-content" bindtap="lookmine">
+					<view class="content-flex">
+						<text class='content' decode="{{true}}">&nbsp;我的动态</text>
+						<view class='arrow'></view>
+					</view>
+					<!-- 分割线 -->
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</view>
+		<view class="alllists">
+			<view class="lable">
+				<image class="lable-image" src='/images/icon/lablemybook.png'></image>
+				<view class="lable-content" bindtap="mybook">
+					<view class="content-flex">
+						<text class='content' decode="{{true}}">&nbsp;我的书籍</text>
+						<view class='arrow'></view>
+					</view>
+					<!-- 分割线 -->
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</view>
+		<view class="alllists">
+			<view class="lable">
+				<image class="lable-image" src='/images/icon/lablebook.png'></image>
+				<view class="lable-content" bindtap="lookcollect">
+					<view class="content-flex">
+						<text class='content' decode="{{true}}">&nbsp;书籍收藏</text>
+						<view class='arrow'></view>
+					</view>
+					<!-- 分割线 -->
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</view>
+		<view class="alllists">
+			<view class="lable">
+				<image class="lable-image" src='/images/icon/lableperson.png'></image>
+				<view class="lable-content" bindtap="updatainfo">
+					<view class="content-flex">
+						<text class='content' decode="{{true}}">&nbsp;编辑信息</text>
+						<view class='arrow'></view>
+					</view>
+					<!-- 分割线 -->
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</view>
+		<view class="alllists">
+			<view class="lable">
+				<image class="lable-image" src='/images/icon/quit.png'></image>
+				<view class="lable-content" bindtap="exitlogin">
+					<view class="content-flex">
+						<text class='content' decode="{{true}}">&nbsp;退出登录</text>
+						<view class='arrow'></view>
+					</view>
+					<!-- 分割线 -->
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else>
+		<view>
+			<image class="loginimg" src="/images/icon/login.png"></image>
+		</view>
+		<view class="loginsign">
+			请先<text bindtap="toLogin" class="tologin">登录</text>或<text bindtap="signup" class="signup">注册</text>哦！
+		</view>
+	</view>
+</view>

@@ -1,0 +1,41 @@
+<view class="weui-search-bar">
+	<view class="weui-search-bar__form">
+		<view class="weui-search-bar__box">
+			<icon class="weui-icon-search_in-box" type="search" size="20"></icon>
+			<input type="text" class="inputs" placeholder="请输入书名" maxlength='10' value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+			<view wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+				<icon class="weui-icon-clear" type="clear" size="20"></icon>
+			</view>
+		</view>
+		<view wx:if="{{ifshowhistory}}">
+			<scroll-view class="scbg" enable-flex="true">
+				<view  wx:for="{{select_log}}" wx:key="key">
+					<view  class="historybtn" bindtap="stotageSelect"  data-text="{{item}}">{{item}}</view>
+				</view>
+			</scroll-view>
+			<view class="deletehistory" wx:if="{{delectbool}}" bindtap="deleteLog">清除历史记录</view>
+			<view bindtap="selectbook" class="btn">搜索</view>
+		</view>
+	</view>
+</view>
+
+<scroll-view class="scbg" scroll-y="true" enable-flex="true">
+	<block wx:for="{{booklist}}" wx:key="key" wx:for-item="itemName" wx:for-index="id">
+		<view class='box' id="itemName" bindtap="showdetail" data-text="{{itemName}}">
+			<view class='secondblock'>
+				<view class='name'>
+					<image src="{{itemName.avatar}}" class="touxiang"></image>
+					<text class='showname'>{{itemName.username}}</text>
+				</view>
+				<view class="book-box">
+					<view wx:if="{{itemName.photo}}">
+						<image class='photo' src="{{itemName.photo}}"></image>
+					</view>
+					<text class='bookname'>《{{itemName.bookname}}》</text>
+					<view class='content'>{{itemName.content}}</view>
+					<view class="showtime">{{filters.formatDate(itemName.addtime)}}</view>
+				</view>
+			</view>
+		</view>
+	</block>
+</scroll-view>

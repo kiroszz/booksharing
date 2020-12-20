@@ -1,0 +1,44 @@
+<!--pages/enroll/enroll.wxml-->
+<view class='background'>
+	<view class="avatar">
+		<image style="border-radius:50%;" src="{{avatarUrl ? avatarUrl:'/images/icon/person.png'}}" class="avatar-img"></image>
+		<text class="avatar-text">用户注册</text>
+	</view>
+
+	<block wx:if="{{isUserInfo}}">
+		<view class='first'>
+			<text class="first-text">昵称：</text>
+			<textarea value="{{data.userName}}" class='inputs' type='text' bindinput='usernameInput'> </textarea>
+		</view>
+		<view class='second'>
+			<text class="first-text">手机号：</text>
+			<textarea value="{{data.phone}}" class='inputs' type='number' bindinput='phoneInput'> </textarea>
+		</view>
+		<view class='second'>
+			<text class="first-text">微信号：</text>
+			<textarea value="{{data.wechatID}}" class='inputs' type='text' bindinput='wechatIDInput'> </textarea>
+		</view>
+		<view class='second'>
+			<text class="first-text">年级专业班级：</text>
+			<textarea value="{{data.classroom}}" class='inputs' type='text' bindinput='classroomInput'> </textarea>
+		</view>
+		<view class='second'>
+			<text class="first-text">登录密码：</text>
+			<input id='password' placeholder='' placeholder-class='plass' class='inputs' type='password' bindinput='passwordInput'> </input>
+		</view>
+		<view class='second'>
+			<text class="first-text">确认密码：</text>
+			<input id='passworddack' placeholder='' placeholder-class='plass' class='inputs' type='password' bindinput='passwordInpuAckt'> </input>
+		</view>
+
+		<view id="btn1" class='click' bindtap='regist'>注册</view>
+		<view bindtap='signin' class="cha">
+			<text class='no'>已有账号，点我登录</text>
+		</view>
+	</block>
+	<block wx:else>
+		<button class="but" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+			授权登录
+		</button>
+	</block>
+</view>

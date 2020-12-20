@@ -1,0 +1,134 @@
+/* pages/circle/index/index.wxss */
+
+/* 页面背景 */
+page {
+  background-color: #EFEFEF;
+}
+
+/* 页面布局相关 */
+.scbg {
+  top: 3%;
+  position: absolute;
+  background-color: #EFEFEF;
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box{
+  height: 465rpx;
+  border-radius: 12px;
+  width: 45.5%;
+  background-color: white;
+  margin-bottom: 10px;
+  margin-left: 3%;
+}
+
+.secondblock {
+  display: flex;
+  flex-flow: column;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding-bottom: 15rpx;
+  border-radius: 12px;
+  margin-top: 0;
+}
+
+.addbox{
+  height: 465rpx;
+  border-radius: 12px;
+  width: 45.5%;
+  background-color: white;
+  margin-bottom: 10px;
+  margin-left: 3%;
+}
+
+/* 用户信息样式 */
+.touxiang {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10px;
+  margin-bottom: 5rpx;
+}
+
+.showname {
+  font-size: 32rpx;
+  color:#3F51B5;
+  font-family: PingFangSC-regular;
+  margin-top: 6rpx;
+  margin-left: 2rpx;
+}
+
+.showtime {
+  padding-top: 55rpx;
+  padding-left: 200rpx;
+  font-size: 20rpx;
+  color: gray;
+  font-family: PingFangSC-regular;
+}
+
+.name {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10rpx;
+  margin-left: 0%;
+  margin-right: 6%;
+  font-size: 40rpx;
+  flex-direction: row;
+  border-bottom: 1rpx solid #CFCFCF;
+}
+
+.photo {
+  width: 220rpx;
+  height: 200rpx;
+  border-radius: 1px;
+}
+
+
+/* 书籍信息样式 */
+.book-box {
+  display: flex;
+  flex-flow: column;
+  margin-top: 20rpx;
+}
+
+.bookname {
+  font-size: 32rpx;
+  color: #F57123;
+  font-family: PingFangSC-regular;
+  word-break: break-all;
+    /* 文本溢出省略*/
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.content {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 26rpx;
+  color: black;
+  font-family: PingFangSC-regular;
+  word-break: break-all;
+  padding-top: 5rpx;
+  padding-left: 14rpx;
+}
+
+/* 添加书籍 */
+ .addmybook{
+  margin-top: 30%;
+  margin-left: 20%;
+  height: 200rpx;
+  width: 200rpx;
+ }
+
+ .addtxt{
+   font-weight: big;
+   color: #515151;
+   margin-left: 30%;
+ }

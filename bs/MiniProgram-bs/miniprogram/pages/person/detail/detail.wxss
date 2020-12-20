@@ -1,0 +1,152 @@
+/* pages/circle/detail/detail.wxss */
+
+/* 页面样式 */
+.detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+
+/* 个人信息样式 */
+.person {
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  display: flex;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid gray;
+}
+
+.touxiang {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.person-name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.name {
+  font-size: 35rpx;
+  color: #436eee;
+}
+
+.classroom {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+
+/* 价格样式 */
+.price {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+
+.type {
+  margin-top: 60rpx;
+  color: red;
+  font-size: 35rpx;
+}
+
+/* 书籍信息样式 */
+.book {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.text {
+  margin-top: 10rpx;
+  font-size: 40rpx;
+}
+
+.content {
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+
+/* 书籍图片样式 */
+.image {
+  height: none;
+  width: none;
+}
+
+/* 时间样式 */
+.time {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 25rpx;
+  color: gray;
+}
+
+/* 删除按钮 */
+.button2 {
+  margin-top: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: -1.5%;
+  right: 10%;
+}
+
+/* 圆形点击框 */
+.round-click {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  bottom: 2px;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+  background-color: white;
+  border-top: 2rpx solid white;
+}
+
+.img-button {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
+}
+
+.but-img {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.but-text {
+  font-size: 20rpx;
+  text-align: center;
+  color: gray;
+}
+
+.img {
+  display: flex;
+  flex-direction: row;
+}
+
+.line {
+  margin-left: 425rpx;
+  margin-bottom: 10rpx;
+}
+
+.but-line {
+  font-size: 25rpx;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  border-radius: 50rpx;
+  color: azure;
+  background: linear-gradient(red, orange);
+  margin-left: 50rpx;
+}

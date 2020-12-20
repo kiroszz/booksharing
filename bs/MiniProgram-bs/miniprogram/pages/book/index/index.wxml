@@ -1,0 +1,43 @@
+<!--pages/book/index/index.wxml-->
+<wxs src="timeformat.wxs" module="filters" />
+<view wx:if="{{!donelogin}}">
+		<view>
+			<image class="loginimg" src="/images/icon/login.png"></image>
+		</view>
+		<view class="loginsign">
+			请先<text bindtap="toLogin" class="tologin">登录</text>或<text bindtap="signup" class="signup">注册</text>哦！
+		</view>
+</view>
+<view wx:else>
+ <view class="tabscr">
+ <scroll-view scroll-x class="navbar" scroll-with-animation scroll-left="{{scrollLeft}}rpx" >
+  <view class="nav-item" wx:for="{{tabs}}" wx:key="id" bindtap="tabSelect" data-id="{{index}}">
+    <view class="nav-text {{index==tabCur?'tab-on':''}}">{{item.text}}</view>
+  </view>
+	</scroll-view>
+	<view style="width: 17%;background: #fff;position: fixed;top: 0;z-index: 1;">
+			<image class='selectbook' src='/images/icon/select.png' bindtap='selectbook' ></image>
+	</view>
+ </view>
+
+	<scroll-view class="scbg" scroll-y="true" enable-flex="true">
+		<block wx:for="{{booklist}}" wx:key="key" wx:for-item="itemName" wx:for-index="id">
+			<view class='box' id="itemName" bindtap="showdetail" data-text="{{itemName}}">
+				<view class='secondblock'>
+       		<view class='name'>
+					<image src="{{itemName.avatar}}" class="touxiang"></image>
+          <text class='showname'>{{itemName.username}}</text>
+        	</view>
+					<view class="book-box">
+						<view wx:if="{{itemName.photo}}">
+							<image class='photo' src="{{itemName.photo}}"></image>
+						</view>
+							<text class='bookname'>《{{itemName.bookname}}》</text>
+							<view class='content'>{{itemName.content}}</view>
+							<view class="showtime">{{filters.formatDate(itemName.addtime)}}</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</scroll-view>
+</view>

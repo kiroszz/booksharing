@@ -1,0 +1,32 @@
+<!--pages/information/index/index.wxml-->
+<wxs src="timeformat.wxs" module="filters"/>
+<view wx:if="{{!donelogin}}">
+		<view>
+			<image class="loginimg" src="/images/icon/login.png"></image>
+		</view>
+		<view class="loginsign">
+			请先<text bindtap="toLogin" class="tologin">登录</text>或<text bindtap="signup" class="signup">注册</text>哦！11
+		</view>
+</view>
+<view wx:else>
+	<block wx:for="{{roomlist}}" wx:key="key" wx:for-item="itemName" wx:for-index="id">
+		<view class="uploader">
+			<view class="toChatroom" bindtap="toChatroom" data-text="{{itemName}}">
+					<image src="{{itemName.avatar}}" class="touxiang"></image>
+				<view class="first-block">
+					<view class="tel">
+					<view class="nametime">
+						<text class="showname">{{itemName.nickName}}</text>
+						<text class="showtime">{{filters.formatDate(itemName.sendTimeTS)}}</text>
+					</view>
+						<text class="lastword">{{itemName.textContent}}</text>
+					</view>
+					<view wx:if="{{itemName.photo}}" class="showphoto">
+					<image src="{{itemName.photo}}"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</block>
+</view>
+
